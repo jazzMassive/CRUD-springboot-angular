@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  database:
+    restart: always
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: ms-sql-server-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=M4loK0mpliciran
+    ports:
+      - 1433:1433

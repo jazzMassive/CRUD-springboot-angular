@@ -1,4 +1,4 @@
-package com.esvaga.crudbackend;
+package com.crudbackend.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

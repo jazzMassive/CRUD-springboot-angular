@@ -1,4 +1,4 @@
-package com.esvaga.crudbackend;
+package com.esvaga.springboot;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
