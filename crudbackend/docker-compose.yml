@@ -3,10 +3,18 @@ version: "3"
 services:
   database:
     restart: always
-    image: mcr.microsoft.com/mssql/server:2022-latest
-    container_name: ms-sql-server-latest
+    image: mysql:latest
+    container_name: mysqlserver
     environment:
-      - ACCEPT_EULA=Y
-      - SA_PASSWORD=M4loK0mpliciran
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: management
     ports:
-      - 1433:1433
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - management:/var/lib/mysql
+volumes:
+  management:

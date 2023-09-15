@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springboot" />
+        <module name="crudbackend" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="crudbackend" target="17" />
+      <module name="springboot" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
