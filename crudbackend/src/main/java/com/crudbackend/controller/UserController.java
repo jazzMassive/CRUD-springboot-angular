@@ -37,4 +37,18 @@ public class UserController {
 
         return ResponseEntity.ok(user);
     }
+
+    @PostMapping("/users/{id}")
+    public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User userDetails){
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("User does not exist with id: " + id));
+
+        user.setFirstName(userDetails.getFirstName());
+        user.setLastName(userDetails.getLastName());
+        user.setEmail(userDetails.getEmail());
+
+        User updatedUser = userRepository.save(user);
+
+        return ResponseEntity.ok(updatedUser);
+    }
 }
