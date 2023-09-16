@@ -30,7 +30,7 @@ public class UserController {
     }
 
     // get user by id
-    @GetMapping("/employees/{id}")
+    @GetMapping("/users/{id}")
     public ResponseEntity<User> getUserById (@PathVariable Long id){
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("User does not exist with id: " + id));
