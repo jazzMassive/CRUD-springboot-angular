@@ -4,6 +4,7 @@ import { UserService } from '../user.service';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { CreateUserComponent } from '../create-user/create-user.component';
 import { UpdateUserComponent } from '../update-user/update-user.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-list',
@@ -16,7 +17,7 @@ export class UserListComponent {
   users: User[];
   bsModalRef: BsModalRef;
 
-  constructor(private userService: UserService, private bsModalService: BsModalService) { }
+  constructor(private userService: UserService, private bsModalService: BsModalService, private router: Router) { }
 
   ngOnInit(): void {
     this.getUsers();
@@ -38,7 +39,6 @@ export class UserListComponent {
   }
 
   updateUser(id: number){
-    console.log(id);
     this.userService.changeUserId(id)
     this.bsModalRef = this.bsModalService.show(UpdateUserComponent);
     this.bsModalRef.content.event.subscribe(result => {
@@ -48,6 +48,10 @@ export class UserListComponent {
         }, 1500);
       }
     })
+  }
+
+  deleteUser(id: number){
+    this.router.navigate(['delete-user', id]);
   }
 
 }

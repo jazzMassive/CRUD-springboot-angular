@@ -11,13 +11,15 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { UserService } from './user.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UpdateUserComponent } from './update-user/update-user.component';
+import { DeleteUserComponent } from './delete-user/delete-user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
     CreateUserComponent,
-    UpdateUserComponent
+    UpdateUserComponent,
+    DeleteUserComponent
   ],
   imports: [
     BrowserModule,
