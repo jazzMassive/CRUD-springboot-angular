@@ -12,8 +12,7 @@
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
-                <th>Edit</th>
-                <th>Delete</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -22,16 +21,13 @@
                 <td>{{ user.lastName }}</td>
                 <td>{{ user.email }}</td>
                 <td>
-                    <span class="btn btn-primary">
+                    <span class="btn btn-primary me-1" (click) = "updateUser(user.id)">
                         <span class="bi bi-pencil"></span>
                     </span>
-                </td>
-                <td>
-                    <span class="btn btn-danger">
+                    <span class="btn btn-danger me-1">
                         <span class="bi bi-trash"></span>
                     </span>
                 </td>
-                
             </tr>
         </tbody>
     </table>

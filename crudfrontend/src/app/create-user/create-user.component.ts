@@ -16,7 +16,6 @@ export class CreateUserComponent {
   event: EventEmitter<any> = new EventEmitter();
 
   constructor(private userService: UserService,
-              private router:Router,
               private bsModalRef: BsModalRef) {}
 
   ngOnInit(): void {
@@ -31,12 +30,8 @@ export class CreateUserComponent {
     this.userService.createUser(this.user).subscribe(data =>{
       console.log(data);
       this.event.emit('OK');
-      this.bsModalRef.hide()
+      this.bsModalRef.hide();
     });
-  }
-
-  goToUserList() {
-    this.router.navigate(['/users']);
   }
 
   onClose(){

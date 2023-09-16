@@ -38,7 +38,8 @@ public class UserController {
         return ResponseEntity.ok(user);
     }
 
-    @PostMapping("/users/{id}")
+    // update user
+    @PutMapping("/users/{id}")
     public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User userDetails){
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("User does not exist with id: " + id));
@@ -51,4 +52,6 @@ public class UserController {
 
         return ResponseEntity.ok(updatedUser);
     }
+
+
 }
