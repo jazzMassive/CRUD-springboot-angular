@@ -1,8 +1,10 @@
 package com.crudbackend.controller;
 
+import com.crudbackend.exception.ResourceNotFoundException;
 import com.crudbackend.model.User;
 import com.crudbackend.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,5 +27,14 @@ public class UserController {
     @PostMapping("/users")
     public User createUser(@RequestBody(required = true)User user){
         return userRepository.save(user);
+    }
+
+    // get user by id
+    @GetMapping("/employees/{id}")
+    public ResponseEntity<User> getUserById (@PathVariable Long id){
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("User does not exist with id: " + id));
+
+        return ResponseEntity.ok(user);
     }
 }
