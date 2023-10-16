@@ -8,7 +8,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class UserService {
 
-  private baseURL = "http://localhost:8080/api/v1/users";
+  private baseURL = "http://localhost:8080/api/intervention";
 
   userIdSource = new BehaviorSubject<number>(0);
   userData: any;
