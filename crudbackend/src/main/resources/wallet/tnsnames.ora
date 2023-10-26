@@ -1,0 +1,12 @@
+odysseydbtest_high = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=10.110.10.162))(connect_data=(service_name=gda9fee7b5f8d7e_odysseydbtest_high.adb.oraclecloud.com))(security=(ssl_server_dn_match=no)))
+
+odysseydbtest_low = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=10.110.10.162))(connect_data=(service_name=gda9fee7b5f8d7e_odysseydbtest_low.adb.oraclecloud.com))(security=(ssl_server_dn_match=no)))
+
+odysseydbtest_medium = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=10.110.10.162))(connect_data=(service_name=gda9fee7b5f8d7e_odysseydbtest_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=no)))
+
+odysseydbtest_tp = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=10.110.10.162))(connect_data=(service_name=gda9fee7b5f8d7e_odysseydbtest_tp.adb.oraclecloud.com))(security=(ssl_server_dn_match=no)))
+
+odysseydbtest_tpurgent = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=10.110.10.162))(connect_data=(service_name=gda9fee7b5f8d7e_odysseydbtest_tpurgent.adb.oraclecloud.com))(security=(ssl_server_dn_match=no)))
+
+
+
